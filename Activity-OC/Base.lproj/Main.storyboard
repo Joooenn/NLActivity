@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PWW-eQ-bz7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0O4-RF-WGi">
+            <objects>
+                <navigationController id="PWW-eQ-bz7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YfC-xd-S4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.40820210400000001" green="0.80784313730000001" blue="0.54564994040000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kez-1F-UTj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haW-JP-nK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="124"/>
+        </scene>
+        <!--Activity-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Activity" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-Ki-ZE7">
+                                <rect key="frame" x="125" y="84" width="124" height="30"/>
+                                <state key="normal" title="NavigationActivity">
+                                    <color key="titleColor" red="0.08916033323" green="0.60640722459999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="NavigationStop">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityDidSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hgj-Iz-K5L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-5w-Nlr">
+                                <rect key="frame" x="136.5" y="122" width="101" height="30"/>
+                                <state key="normal" title="NormalActivity">
+                                    <color key="titleColor" red="0.08916033323" green="0.60640722459999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="ActivityHiden">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="normalActivityDidSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ich-fa-qRO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXG-dA-76U">
+                                <rect key="frame" x="115.5" y="160" width="144" height="30"/>
+                                <state key="normal" title="ActivityWithMessage">
+                                    <color key="titleColor" red="0.08916033323" green="0.60640722459999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="ActivityHiden">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ActivitWithMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IP-cP-YTg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mXG-dA-76U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06S-aX-qup"/>
+                            <constraint firstItem="VDZ-5w-Nlr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F8x-H1-4Jx"/>
+                            <constraint firstItem="mXG-dA-76U" firstAttribute="top" secondItem="VDZ-5w-Nlr" secondAttribute="bottom" constant="8" id="GbX-5L-5R2"/>
+                            <constraint firstItem="iTq-Ki-ZE7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="V6g-Zf-cY7"/>
+                            <constraint firstItem="VDZ-5w-Nlr" firstAttribute="top" secondItem="iTq-Ki-ZE7" secondAttribute="bottom" constant="8" id="aJO-E0-IhH"/>
+                            <constraint firstItem="iTq-Ki-ZE7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgc-0m-YsC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Activity" id="JHo-4T-85D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
